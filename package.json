@@ -1,0 +1,27 @@
+{
+  "name": "w04d4-projectone-weekendlab",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelo2dot0/w04d4-projectone-weekendlab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angelo2dot0/w04d4-projectone-weekendlab/issues"
+  },
+  "homepage": "https://github.com/angelo2dot0/w04d4-projectone-weekendlab#readme",
+  "description": ""
+}
