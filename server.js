@@ -1,11 +1,49 @@
-//At the top of your server.js file, require the express and body-parser modules to get started.
-//Use express() to create your app object.
-//At the bottom of your server.js file, use app.listen to set up your server to listen on a port. We usually use port 3000.
-//Run node server.js, npm start, or nodemon in the Terminal to start your server.
-//If you gave app.listen a callback with a log message, you should see the log message in your Terminal.
-//Go to localhost:3000/ to see another message that lets you know your server is listening (but a bit unhappy).
-//In your server code, between the requires and the app.listen, start a section for routes!
-//Create a route to handle GET requests at the / path.
-//Use a simple res.send to send a message that the route is working.
-//Restart your server, reload the page, and you should see the message you sent as a response. Yay!
+//SERVER SIDE JAVASCRIPT
+
+//SECTION FOR REQUIRES
+var express = require('express');
+var path= require('path');
+var bodyParser = require('body-parser');
+var app = express();
+//var nodemon = require("nodemon");
+
+var mongoose = require('mongoose');
+var db = require('./models');
+
+//SECTION FOR CONFIGURATION
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended :true}));
+
+//SECTION FOR ROUTES
+app.get('/', function (req, res) {
+	//res.render('index');
+	// res.send("route is working");
+	db.Photo.find().exec(function(err, photo){
+    	if (err) { return console.log("find error: " + err); }
+    	res.render("index", {photo: photo});
+  });
+});
+
+//post images to new route and url, imgs.ejs with new route in server.js
+//app.get('/imgs', function (req,res){
+//});
+
+app.post('/imgs', function (req,res){
+	var link = req.body.urlInput;
+	console.log('the link actually is:', link);
+	// res.json(link);
+	db.Photo.create({url: link}, function(err, photo){
+    	if (err) { return console.log("create error: " + err); }
+    	console.log("created ", photo.url);
+    	res.json(photo);
+    	// process.exit();
+});
+});
+
+//sets up server to listen on a port
+var server = app.listen(3000, function() {
+	var port = server.address().port;
+	console.log('sanity check app listening on port', port);
+});
 

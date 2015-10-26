@@ -1,0 +1,13 @@
+body {
+  color: #FFFF00;
+  font-family: Helvetica, Arial, sans-serif;
+  /*background-color: skyblue;*/ /* Sanity Check! */
+  background-image: url("http://i.imgur.com/4VlZ7Jq.jpg");
+}
+h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+img {
+	height: 100px;
+}
