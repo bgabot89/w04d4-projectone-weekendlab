@@ -53,7 +53,8 @@ app.post('/imgs', function (req,res){
 // });
 
 //sets up server to listen on a port
-var server = app.listen(3000, function() {
+//updates (process.env.PORT || 3000) due to heroku
+var server = app.listen(process.env.PORT || 3000, function() {
 	var port = server.address().port;
 	console.log('sanity check app listening on port', port);
 });
