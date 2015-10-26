@@ -6,7 +6,6 @@ var path= require('path');
 var bodyParser = require('body-parser');
 var app = express();
 //var nodemon = require("nodemon");
-
 var mongoose = require('mongoose');
 var db = require('./models');
 
@@ -27,6 +26,7 @@ app.get('/', function (req, res) {
 
 //post images to new route and url, imgs.ejs with new route in server.js
 //app.get('/imgs', function (req,res){
+//	res.render("index", {photo: photo});
 //});
 
 app.post('/imgs', function (req,res){
@@ -40,6 +40,17 @@ app.post('/imgs', function (req,res){
     	// process.exit();
 });
 });
+
+// //SECTION FOR USER SIGNUP AND LOGIN
+// // signup route with placeholder response
+// app.get('/signup', function (req, res) {
+//   res.send('signup coming soon');
+// });
+
+// // login route with placeholder response
+// app.get('/login', function (req, res) {
+//   res.send('login coming soon');
+// });
 
 //sets up server to listen on a port
 var server = app.listen(3000, function() {
