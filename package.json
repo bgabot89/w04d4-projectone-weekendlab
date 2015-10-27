@@ -25,7 +25,3 @@
   "homepage": "https://github.com/angelo2dot0/w04d4-projectone-weekendlab#readme",
   "description": ""
 }
-//updates due to heroku
-"scripts": {
-  "start": "node server.js"
-}
