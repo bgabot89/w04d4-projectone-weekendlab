@@ -25,24 +25,23 @@
          	<h1 class="text-center">Signup to the Photo-sharing Web App</h1>
          	<hr>
          	<!-- Adding the form that later will be used to add new posts to the list using jQuery. -->
-			<form class="text-center" id="new-url" method="post" action="/signup">
+			<form class="text-center" id="new-user" method="POST" action="/users">
 				<div class="form-group">
-    				<label for="exampleURL">Enter Username here!</label>
-    				<input class="form-control" id="url-item" placeholder="Got a photo URL to share with your friends?" name="urlInput" autofocus>
+    				<label for="exampleURL">Enter Email here!</label>
+    				<input type="email" class="form-control" id="email-item" placeholder="Enter Email here" name="emailInput" autofocus required>
 				</div>
         <div class="form-group">
             <label for="exampleURL">Enter Password here!</label>
-            <input class="form-control" id="url-item" placeholder="Got a photo URL to share with your friends?" name="urlInput" autofocus>
+            <input type="password" class="form-control" id="password-item" placeholder="Enter Password here" name="passwordInput" autofocus required>
         </div>
   				<div class="form-group">
   					<!-- Replacing with a more stylish Boostrap button component that provides extra visual weight -->
-					<button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Nike says, just share it!">Click to share it!</button>
+					<button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Nike says, just click it!">Click to submit!</button>
     			</div>
 			</form>
 			<hr>
 			<!-- Adding an unorderded list element that will later be used for making a list of posts using HTML strings, JavaScript and jQuery (and Object Oriented Programming!) that render to the DOM. -->
-			<ul id="url-list">
-      </ul>
+			<!--<ul id="url-list"></ul>-->
         </div>
       </div>
     </div>
@@ -50,8 +49,11 @@
 </html>
 
 <!--
-form id="new-url"
-input id="url-item"
-input name="urlInput"
-ul id="url-list"
+form id="new-user"
+form method="post"
+form action="/users"
+input id="email-item"
+input name="emailInput"
+input id="password-item"
+input name="passwordInput"
 -->

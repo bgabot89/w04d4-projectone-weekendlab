@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Photo-sharing Profile Page</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <!-- Replaced with latest version 2.1.4 of jquery from https://developers.google.com/speed/libraries/#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="base.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+         	<h1 class="text-center">Profile Page - Photo-sharing Web App</h1>
+         	<hr>
+         	<h2>Welcome! You're logged in as <%= user.email %>.</h2>
+          <hr>
+          <a id="logout" href="/logout" class="btn btn-default">Log Out</a>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+form id="new-user"
+form method="post"
+form action="/users"
+input id="email-item"
+input name="emailInput"
+input id="password-item"
+input name="passwordInput"
+-->

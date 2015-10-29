@@ -11,3 +11,9 @@ h1 {
 img {
 	height: 100px;
 }
+/* Set a size for our map container, the Google Map will take up 100% of this container */
+            #map {
+                width: 550px;
+                height: 300px;
+                margin-left: 300px;
+            }

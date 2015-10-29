@@ -9,3 +9,5 @@ mongoose.connect(
 	'mongodb://localhost/w04d4-projectone-weekendlab');
 // add your model to index.js's module.exports
 module.exports.Photo = require('./photo.js');
+//requiring here after commenting out "var User = require('./models/user')" from server.js
+module.exports.User = require('./user.js');
