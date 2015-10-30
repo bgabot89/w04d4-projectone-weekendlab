@@ -39,13 +39,26 @@ app.use(session({
 
 //SECTION FOR ROUTES
 
-//SECTION FOR ROOT HOME PAGE
+// //SECTION FOR ROOT HOME PAGE
 app.get('/', function (req, res) {
 	//res.render('index');
 	// res.send("route is working");
-	db.Photo.find().exec(function(err, photo){
-    	if (err) { return console.log("find error: " + err); }
-    	res.render("index", {photo: photo});
+	//db.Photo.find().exec(function(err, photo){
+    	//if (err) { return console.log("find error: " + err); }
+    	//res.render("index", {photo: photo});
+    	res.render("index");
+  //});
+});
+
+//SECTION FOR GALLERTY RENDER ROUTE
+app.get('/gallery', function (req, res) {
+	//res.render('index');
+	// res.send("route is working");
+	db.Photo.find({}).exec(function(err, photo){
+    	if (err) { 
+    		return console.log("find error: " + err); 
+    	}
+    	res.render("gallery", {photo: photo});
   });
 });
 

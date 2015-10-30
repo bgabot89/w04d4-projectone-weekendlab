@@ -5,9 +5,12 @@ var Schema = mongoose.Schema;
 var userSchema = new Schema({
 	email:{
 		type: String,
-		unique: true
+		unique: true,
+    index: true,
+    match: /.+\@.+\..+/
 	},
-  		passwordDigest: String
+  		passwordDigest: String,
+
 });
 
 // create a new user with secure (hashed) password
