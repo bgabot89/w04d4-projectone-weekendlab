@@ -20,7 +20,7 @@ var session = require('express-session');
 // load in dotenv module
 // don't need to save this one to a var
 // just pull in the dotenv module's code and run its load method
-require('dotenv').load();
+// require('dotenv').load();
 
 //SECTION FOR CONFIGURATION
 app.set('view engine', 'ejs');
